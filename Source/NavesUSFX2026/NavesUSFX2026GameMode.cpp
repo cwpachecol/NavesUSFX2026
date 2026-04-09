@@ -13,7 +13,7 @@ ANavesUSFX2026GameMode::ANavesUSFX2026GameMode()
 	DefaultPawnClass = ANavesUSFX2026Pawn::StaticClass();
     GeneradorLaberintoInstancia = CreateDefaultSubobject<AGeneradorLaberinto>(TEXT("GeneradorLaberinto"));
 
-    GeneradorLaberintoClass = AGeneradorLaberinto::StaticClass();
+    //GeneradorLaberintoClass = AGeneradorLaberinto::StaticClass();
 }
 
 void ANavesUSFX2026GameMode::BeginPlay()
@@ -26,26 +26,25 @@ void ANavesUSFX2026GameMode::BeginPlay()
         return;
     }
 
+    /*
     if (!GeneradorLaberintoClass)
     {
         UE_LOG(LogTemp, Warning, TEXT("GameMode: LaberintoGeneradorClass no esta asignada."));
         return;
-    }
+    }*/
 
     FVector PosicionSpawn = FVector::ZeroVector;
     FRotator RotacionSpawn = FRotator::ZeroRotator;
 
-    FActorSpawnParameters SpawnParams;
+    /*FActorSpawnParameters SpawnParams;
     SpawnParams.Owner = this;
     SpawnParams.SpawnCollisionHandlingOverride =
-        ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+        ESpawnActorCollisionHandlingMethod::AlwaysSpawn;*/
 
     GeneradorLaberintoInstancia = GetWorld()->SpawnActor<AGeneradorLaberinto>(
-        GeneradorLaberintoClass,
+        AGeneradorLaberinto::StaticClass(),
         PosicionSpawn,
-        RotacionSpawn,
-        SpawnParams
-    );
+        RotacionSpawn);
 
     if (GeneradorLaberintoInstancia)
     {
@@ -55,7 +54,9 @@ void ANavesUSFX2026GameMode::BeginPlay()
     {
         UE_LOG(LogTemp, Error, TEXT("GameMode: No se pudo crear ALaberintoGenerador."));
     }
-    GeneradorLaberintoInstancia->ClasificarBloquesPorSector();
+    GeneradorLaberintoInstancia->CrearBloquesEnEscena();
+
+    //GeneradorLaberintoInstancia->ClasificarBloquesPorSector();
 }
 
 void ANavesUSFX2026GameMode::Tick(float DeltaTime)

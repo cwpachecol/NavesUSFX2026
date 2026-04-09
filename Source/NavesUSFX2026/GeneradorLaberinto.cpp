@@ -11,7 +11,7 @@ AGeneradorLaberinto::AGeneradorLaberinto()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-    PosicionOrigenLaberinto = FVector(-1600.0f, -1600.0f, 200.0f);
+    //PosicionOrigenLaberinto = FVector(-1600.0f, -1600.0f, 200.0f);
 }
 
 // Called when the game starts or when spawned
@@ -19,15 +19,14 @@ void AGeneradorLaberinto::BeginPlay()
 {
 	Super::BeginPlay();
 
-	BloqueClass = ABloque::StaticClass();
-
-	GenerarMapaBase();
-	AbrirCaminosAleatorios();
-	SpawnearBloques();
-
-    GetWorldTimerManager().SetTimer(TimerMoverBloques, this, &AGeneradorLaberinto::MoverBloquesAlMargen, 3.0f, false);
+	//GenerarMapaBase();
+	//AbrirCaminosAleatorios();
+	//SpawnearBloques();
+    //SpawnearBloquesSimple();
+    //GetWorldTimerManager().SetTimer(TimerMoverBloques, this, &AGeneradorLaberinto::MoverBloquesAlMargen, 3.0f, false);
 }
 
+/*
 void AGeneradorLaberinto::ClasificarBloquesPorSector()
 {
     TABSI.Empty();
@@ -163,12 +162,13 @@ void AGeneradorLaberinto::AbrirCaminosAleatorios()
         }
     }
 }
-
+*/
+/*
 void AGeneradorLaberinto::SpawnearBloques()
 {
-    if (!GetWorld() || !BloqueClass)
+    if (!GetWorld())
     {
-        UE_LOG(LogTemp, Warning, TEXT("World o BloqueClass no valido."));
+        UE_LOG(LogTemp, Warning, TEXT("World no valido."));
         return;
     }
 
@@ -180,8 +180,7 @@ void AGeneradorLaberinto::SpawnearBloques()
         {
             if (Mapa[F][C] == 1)
             {
-                ABloque* Bloque = GetWorld()->SpawnActor<ABloque>(
-                    BloqueClass,
+				ABloque* Bloque = GetWorld()->SpawnActor<ABloque>(ABloque::StaticClass(),
                     ObtenerPosicionMundo(F, C),
                     FRotator::ZeroRotator
                 );
@@ -196,12 +195,66 @@ void AGeneradorLaberinto::SpawnearBloques()
 
     UE_LOG(LogTemp, Warning, TEXT("Bloques spawneados: %d"), TABloques.Num());
 }
+*/
 
+//void AGeneradorLaberinto::SpawnearBloquesSimple()
+//{
+//    if (!GetWorld())
+//    {
+//        UE_LOG(LogTemp, Warning, TEXT("World no valido."));
+//        return;
+//    }
+//
+//    TABloques.Empty();
+//
+//    for (int32 nb = 0; nb < 50; nb++)
+//    {
+//		// Generar posiciones aleatorias dentro del rango del laberinto
+//		int32 F = FMath::RandRange(0, Filas - 1);
+//		int32 C = FMath::RandRange(0, Columnas - 1);
+//
+//        ABloque* Bloque = GetWorld()->SpawnActor<ABloque>(ABloque::StaticClass(),
+//            ObtenerPosicionMundo(F, C),
+//            FRotator::ZeroRotator
+//        );
+//
+//        if (Bloque)
+//        {
+//            TABloques.Add(Bloque);
+//        }
+//    }
+//
+//    /*
+//    for (int32 F = 0; F < Filas; ++F)
+//    {
+//        for (int32 C = 0; C < Columnas; ++C)
+//        {
+//            if (Mapa[F][C] == 1)
+//            {
+//                ABloque* Bloque = GetWorld()->SpawnActor<ABloque>(ABloque::StaticClass(),
+//                    ObtenerPosicionMundo(F, C),
+//                    FRotator::ZeroRotator
+//                );
+//
+//                if (Bloque)
+//                {
+//                    TABloques.Add(Bloque);
+//                }
+//            }
+//        }
+//    }
+//    */
+//    UE_LOG(LogTemp, Warning, TEXT("Bloques spawneados: %d"), TABloques.Num());
+//}
+
+
+/*
 bool AGeneradorLaberinto::EsValida(int32 F, int32 C) const
 {
 	return F >= 0 && F < Filas && C >= 0 && C < Columnas;
 }
-
+*/
+/*
 void AGeneradorLaberinto::PrepararMovimientoBloquesAlMargen()
 {
     BloquesEnMovimiento.Empty();
@@ -227,7 +280,8 @@ void AGeneradorLaberinto::PrepararMovimientoBloquesAlMargen()
 
     UE_LOG(LogTemp, Warning, TEXT("Movimiento paulatino iniciado."));
 }
-
+*/
+/*
 void AGeneradorLaberinto::ActualizarMovimientoBloques(float DeltaTime)
 {
     bool bTodosLlegaron = true;
@@ -287,18 +341,49 @@ bool AGeneradorLaberinto::EsBorde(int32 Fila, int32 Columna) const
 
 FVector AGeneradorLaberinto::ObtenerPosicionMundo(int32 F, int32 C) const
 {
-	//return GetActorLocation() + FVector(F * TamCelda, C * TamCelda, 400.0f);
+    //return GetActorLocation() + FVector(F * TamCelda, C * TamCelda, 0.0f);
+    //return GetActorLocation() + FVector(F * TamCelda, C * TamCelda, 400.0f);
     return PosicionOrigenLaberinto + FVector(F * TamCelda, C * TamCelda, 50.0f);
 }
-
+*/
 // Called every frame
 void AGeneradorLaberinto::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+    /*
     if (bMoverBloques)
     {
         ActualizarMovimientoBloques(DeltaTime);
     }
+    */
 }
 
+void AGeneradorLaberinto::CrearBloquesEnEscena()
+{
+    UWorld* World = GetWorld();
+    if (!World) return;
+
+    /*    FActorSpawnParameters SpawnParams;
+        SpawnParams.Owner = this;*/
+
+    const FVector Origin = FVector::ZeroVector;
+
+    for (int32 i = 0; i < CantidadBloques; ++i)
+    {
+        const FVector RandomOffset(
+            FMath::FRandRange(-LimitesMapa.X, LimitesMapa.X),
+            FMath::FRandRange(-LimitesMapa.Y, LimitesMapa.Y),
+            FMath::FRandRange(0.f, LimitesMapa.Z)
+        );
+
+        const FVector SpawnLocation = UbicacionMedia + RandomOffset;
+        const FRotator SpawnRotation = FRotator::ZeroRotator;
+
+        ABloque* BloqueNuevo = World->SpawnActor<ABloque>(ABloque::StaticClass(), SpawnLocation, SpawnRotation);
+
+        if (BloqueNuevo)
+        {
+            TABloques.Add(BloqueNuevo);
+        }
+    }
+}

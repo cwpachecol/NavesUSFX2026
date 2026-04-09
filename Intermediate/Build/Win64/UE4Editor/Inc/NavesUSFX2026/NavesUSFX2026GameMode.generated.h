@@ -58,11 +58,7 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ANavesUSFX2026GameMode)
 
 
-#define NavesUSFX2026_Source_NavesUSFX2026_NavesUSFX2026GameMode_h_14_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__GeneradorLaberintoClass() { return STRUCT_OFFSET(ANavesUSFX2026GameMode, GeneradorLaberintoClass); } \
-	FORCEINLINE static uint32 __PPO__GeneradorLaberintoInstancia() { return STRUCT_OFFSET(ANavesUSFX2026GameMode, GeneradorLaberintoInstancia); }
-
-
+#define NavesUSFX2026_Source_NavesUSFX2026_NavesUSFX2026GameMode_h_14_PRIVATE_PROPERTY_OFFSET
 #define NavesUSFX2026_Source_NavesUSFX2026_NavesUSFX2026GameMode_h_11_PROLOG
 #define NavesUSFX2026_Source_NavesUSFX2026_NavesUSFX2026GameMode_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

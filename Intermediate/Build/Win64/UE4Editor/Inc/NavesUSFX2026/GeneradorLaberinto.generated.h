@@ -20,10 +20,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> NAVESUSFX2026_API UScriptStruct* StaticStruct<struct FBloqueMovimientoData>();
 
-#define NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_26_SPARSE_DATA
-#define NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_26_RPC_WRAPPERS
-#define NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_26_RPC_WRAPPERS_NO_PURE_DECLS
-#define NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_26_INCLASS_NO_PURE_DECLS \
+#define NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_28_SPARSE_DATA
+#define NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_28_RPC_WRAPPERS
+#define NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_28_RPC_WRAPPERS_NO_PURE_DECLS
+#define NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_28_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAGeneradorLaberinto(); \
 	friend struct Z_Construct_UClass_AGeneradorLaberinto_Statics; \
@@ -32,7 +32,7 @@ public: \
 	DECLARE_SERIALIZER(AGeneradorLaberinto)
 
 
-#define NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_26_INCLASS \
+#define NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_28_INCLASS \
 private: \
 	static void StaticRegisterNativesAGeneradorLaberinto(); \
 	friend struct Z_Construct_UClass_AGeneradorLaberinto_Statics; \
@@ -41,7 +41,7 @@ public: \
 	DECLARE_SERIALIZER(AGeneradorLaberinto)
 
 
-#define NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_26_STANDARD_CONSTRUCTORS \
+#define NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_28_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AGeneradorLaberinto(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AGeneradorLaberinto) \
@@ -54,7 +54,7 @@ private: \
 public:
 
 
-#define NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_26_ENHANCED_CONSTRUCTORS \
+#define NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_28_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AGeneradorLaberinto(AGeneradorLaberinto&&); \
@@ -65,35 +65,28 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AGeneradorLaberinto)
 
 
-#define NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_26_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__Filas() { return STRUCT_OFFSET(AGeneradorLaberinto, Filas); } \
-	FORCEINLINE static uint32 __PPO__Columnas() { return STRUCT_OFFSET(AGeneradorLaberinto, Columnas); } \
-	FORCEINLINE static uint32 __PPO__TamCelda() { return STRUCT_OFFSET(AGeneradorLaberinto, TamCelda); } \
-	FORCEINLINE static uint32 __PPO__TABloques() { return STRUCT_OFFSET(AGeneradorLaberinto, TABloques); } \
-	FORCEINLINE static uint32 __PPO__BloquesEnMovimiento() { return STRUCT_OFFSET(AGeneradorLaberinto, BloquesEnMovimiento); }
-
-
-#define NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_23_PROLOG
-#define NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_26_GENERATED_BODY_LEGACY \
+#define NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_28_PRIVATE_PROPERTY_OFFSET
+#define NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_25_PROLOG
+#define NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_28_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_26_PRIVATE_PROPERTY_OFFSET \
-	NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_26_SPARSE_DATA \
-	NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_26_RPC_WRAPPERS \
-	NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_26_INCLASS \
-	NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_26_STANDARD_CONSTRUCTORS \
+	NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_28_PRIVATE_PROPERTY_OFFSET \
+	NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_28_SPARSE_DATA \
+	NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_28_RPC_WRAPPERS \
+	NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_28_INCLASS \
+	NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_28_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_26_GENERATED_BODY \
+#define NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_28_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_26_PRIVATE_PROPERTY_OFFSET \
-	NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_26_SPARSE_DATA \
-	NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
-	NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_26_INCLASS_NO_PURE_DECLS \
-	NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_26_ENHANCED_CONSTRUCTORS \
+	NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_28_PRIVATE_PROPERTY_OFFSET \
+	NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_28_SPARSE_DATA \
+	NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_28_RPC_WRAPPERS_NO_PURE_DECLS \
+	NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_28_INCLASS_NO_PURE_DECLS \
+	NavesUSFX2026_Source_NavesUSFX2026_GeneradorLaberinto_h_28_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

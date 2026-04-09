@@ -13,11 +13,13 @@ struct FBloqueMovimientoData
 {
 	GENERATED_BODY()
 
+	/*/
 	UPROPERTY()
 	ABloque* Bloque = nullptr;
 
 	UPROPERTY()
 	FVector Destino = FVector::ZeroVector;
+	*/
 };
 
 UCLASS()
@@ -32,32 +34,24 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-
-	UPROPERTY(EditAnywhere, Category = "Laberinto")
+	int32 CantidadBloques = 100;
+	FVector LimitesMapa = FVector(2000.f, 1000.f, 0.f);
+	FVector UbicacionMedia = FVector(0.f, 0.f, 200.f);
+	/*
 	int32 Filas = 18;
-
-	UPROPERTY(EditAnywhere, Category = "Laberinto")
 	int32 Columnas = 18;
-
-	UPROPERTY(EditAnywhere, Category = "Laberinto")
-	float TamCelda = 200.0f;
+	float TamCelda = 200.0f;*/
 public:
-	UPROPERTY(EditAnywhere, Category = "Laberinto")
-	TSubclassOf<ABloque> BloqueClass;
+	TArray<ABloque*> TABloques;
+	/*
+public:
+	
 	//P1
-	UPROPERTY(VisibleAnywhere, Category = "Laberinto")
 	TArray<ABloque*> TABSI; // Superior Izquierda
-
-	UPROPERTY(VisibleAnywhere, Category = "Laberinto")
 	TArray<ABloque*> TABSD; // Superior Derecha
-
-	UPROPERTY(VisibleAnywhere, Category = "Laberinto")
 	TArray<ABloque*> TABII; // Inferior Izquierda
-
-	UPROPERTY(VisibleAnywhere, Category = "Laberinto")
 	TArray<ABloque*> TABID; // Inferior Derecha
-
-	UPROPERTY(EditAnywhere, Category = "Movimiento")
+	
 	float VelocidadInterpolacion = 1.0f;
 
 	void ClasificarBloquesPorSector();
@@ -65,24 +59,19 @@ public:
 	void MoverBloquesAlMargen();
 	void MoverSectorAlMargen(TArray<ABloque*>& Sector, const FVector& Inicio, const FVector& Direccion, float Espaciado);
 
-
-	protected:
-	UPROPERTY(VisibleAnywhere, Category = "Laberinto")
-	TArray<ABloque*> TABloques;
-
 private:
 	TArray<TArray<int32>> Mapa;
 
 	void GenerarMapaBase();
 	void AbrirCaminosAleatorios();
 	void SpawnearBloques();
+	void SpawnearBloquesSimple();
 
 	bool EsValida(int32 F, int32 C) const;
 	FVector PosicionOrigenLaberinto;
 
 	FTimerHandle TimerMoverBloques;
 
-	UPROPERTY()
 	TArray<FBloqueMovimientoData> BloquesEnMovimiento;
 
 	bool bMoverBloques = false;
@@ -96,9 +85,11 @@ private:
 	bool EsBorde(int32 Fila, int32 Columna) const;
 	FVector ObtenerPosicionMundo(int32 Fila, int32 Columna) const;
 
-
+	*/
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+public:
+	void CrearBloquesEnEscena();
 };

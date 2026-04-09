@@ -21,10 +21,10 @@ public:
 protected:
 	virtual void BeginPlay() override;
 
-	UPROPERTY(EditAnywhere, Category = "Laberinto")
-	TSubclassOf<AGeneradorLaberinto> GeneradorLaberintoClass;
+	//UPROPERTY(EditAnywhere, Category = "Laberinto")
+	//TSubclassOf<AGeneradorLaberinto> GeneradorLaberintoClass;
 
-	UPROPERTY(VisibleAnywhere, Category = "Laberinto")
+	//UPROPERTY(VisibleAnywhere, Category = "Laberinto")
 	AGeneradorLaberinto* GeneradorLaberintoInstancia;
 
 public:
