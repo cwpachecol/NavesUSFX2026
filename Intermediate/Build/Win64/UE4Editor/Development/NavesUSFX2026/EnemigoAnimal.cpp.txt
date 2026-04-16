@@ -7,3 +7,5 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFra
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
 D:\src_SIS457\NavesUSFX2026\Intermediate\Build\Win64\UE4Editor\Inc\NavesUSFX2026\EnemigoAnimal.generated.h
+D:\src_SIS457\NavesUSFX2026\Source\NavesUSFX2026\Bonus.h
+D:\src_SIS457\NavesUSFX2026\Intermediate\Build\Win64\UE4Editor\Inc\NavesUSFX2026\Bonus.generated.h

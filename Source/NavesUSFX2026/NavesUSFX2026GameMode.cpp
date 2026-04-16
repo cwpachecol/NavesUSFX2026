@@ -6,6 +6,7 @@
 #include "Engine/World.h"
 #include "Bloque.h"
 #include "Bonus.h" // Agrega esta línea al inicio del archivo para incluir la definición completa de ABonus
+#include "EnemigoAnimal.h"
 
 
 ANavesUSFX2026GameMode::ANavesUSFX2026GameMode()
@@ -65,6 +66,12 @@ void ANavesUSFX2026GameMode::BeginPlay()
         ABonus* BonusActual = ABonus::GetInstancia(GetWorld());
         UE_LOG(LogTemp, Warning, TEXT("GameMode: Bloque %d en posicion (%f, %f, %f)"), i, BonusActual->GetActorLocation().X, BonusActual->GetActorLocation().Y, BonusActual->GetActorLocation().Z);
 	}
+
+	AEnemigoAnimal* EnemigoActual = GetWorld()->SpawnActor<AEnemigoAnimal>(
+        AEnemigoAnimal::StaticClass(),
+        FVector::ZeroVector,
+        FRotator::ZeroRotator
+    );
 
 }
 

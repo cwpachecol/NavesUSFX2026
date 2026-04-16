@@ -19,3 +19,5 @@ D:\src_SIS457\NavesUSFX2026\Source\NavesUSFX2026\Bloque.h
 D:\src_SIS457\NavesUSFX2026\Intermediate\Build\Win64\UE4Editor\Inc\NavesUSFX2026\Bloque.generated.h
 D:\src_SIS457\NavesUSFX2026\Source\NavesUSFX2026\Bonus.h
 D:\src_SIS457\NavesUSFX2026\Intermediate\Build\Win64\UE4Editor\Inc\NavesUSFX2026\Bonus.generated.h
+D:\src_SIS457\NavesUSFX2026\Source\NavesUSFX2026\EnemigoAnimal.h
+D:\src_SIS457\NavesUSFX2026\Intermediate\Build\Win64\UE4Editor\Inc\NavesUSFX2026\EnemigoAnimal.generated.h

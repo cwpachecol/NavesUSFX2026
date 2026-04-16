@@ -17,6 +17,7 @@ class NAVESUSFX2026_API AEnemigoAnimal : public ACharacter
 public:
 	// Sets default values for this character's properties
 	AEnemigoAnimal();
+	void MoverBonus();
 
 protected:
 	// Called when the game starts or when spawned

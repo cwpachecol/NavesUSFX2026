@@ -3,6 +3,7 @@
 
 #include "EnemigoAnimal.h"
 #include "Engine/StaticMesh.h"
+#include "Bonus.h"
 #include "UObject/ConstructorHelpers.h"
 
 // Sets default values
@@ -53,10 +54,18 @@ AEnemigoAnimal::AEnemigoAnimal()
     //}
 }
 
+void AEnemigoAnimal::MoverBonus()
+{
+	ABonus* Bonus = ABonus::GetInstancia(GetWorld());
+    Bonus->SetActorLocation(FVector(0.0f, 0.0f, 250.0f));  
+}
+
 // Called when the game starts or when spawned
 void AEnemigoAnimal::BeginPlay()
 {
 	Super::BeginPlay();
+	FTimerHandle TimerHandle;
+	GetWorldTimerManager().SetTimer(TimerHandle, this, &AEnemigoAnimal::MoverBonus, 5.0f, false);
 	
 }
 
