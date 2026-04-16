@@ -6,6 +6,7 @@
 #include "GameFramework/GameModeBase.h"
 #include "NavesUSFX2026GameMode.generated.h"
 
+class ABonus;
 class AGeneradorLaberinto;
 
 UCLASS(MinimalAPI)
@@ -26,6 +27,8 @@ protected:
 
 	//UPROPERTY(VisibleAnywhere, Category = "Laberinto")
 	AGeneradorLaberinto* GeneradorLaberintoInstancia;
+
+	ABonus* BonusInstancia;
 
 public:
 	virtual void Tick(float DeltaTime) override;

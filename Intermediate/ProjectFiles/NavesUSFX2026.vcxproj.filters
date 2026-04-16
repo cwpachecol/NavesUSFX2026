@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\NavesUSFX2026.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{427B9283-BF4C-4BD5-BED1-165D0E86319F}</UniqueIdentifier>
+      <UniqueIdentifier>{F60D82A4-17A7-4318-A1DC-EDF60B00901C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\NavesUSFX2026.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{683F563E-8913-48EA-9C0B-452505C16C22}</UniqueIdentifier>
+      <UniqueIdentifier>{ED728A29-B0E8-44A3-B116-13E26AAEE95A}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,12 +32,18 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\NavesUSFX2026">
-      <UniqueIdentifier>{0CE259BF-8B82-4275-AE5B-BCD248288FD3}</UniqueIdentifier>
+      <UniqueIdentifier>{666CBA7E-62A3-4CC6-937F-58CC54EF2897}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\NavesUSFX2026\Bloque.cpp">
       <Filter>Source\NavesUSFX2026</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\NavesUSFX2026\Bloque.h">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NavesUSFX2026\Bonus.cpp">
+      <Filter>Source\NavesUSFX2026</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NavesUSFX2026\Bonus.h">
       <Filter>Source\NavesUSFX2026</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\NavesUSFX2026\Enemigo.cpp">

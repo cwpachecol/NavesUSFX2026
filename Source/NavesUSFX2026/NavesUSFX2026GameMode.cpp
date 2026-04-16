@@ -5,6 +5,7 @@
 #include "GeneradorLaberinto.h"
 #include "Engine/World.h"
 #include "Bloque.h"
+#include "Bonus.h" // Agrega esta línea al inicio del archivo para incluir la definición completa de ABonus
 
 
 ANavesUSFX2026GameMode::ANavesUSFX2026GameMode()
@@ -19,6 +20,7 @@ ANavesUSFX2026GameMode::ANavesUSFX2026GameMode()
 void ANavesUSFX2026GameMode::BeginPlay()
 {
 	Super::BeginPlay();
+	
 	
     if (!GetWorld())
     {
@@ -54,9 +56,16 @@ void ANavesUSFX2026GameMode::BeginPlay()
     {
         UE_LOG(LogTemp, Error, TEXT("GameMode: No se pudo crear ALaberintoGenerador."));
     }
-    GeneradorLaberintoInstancia->CrearBloquesEnEscena();
+    //GeneradorLaberintoInstancia->CrearBloquesEnEscena();
 
     //GeneradorLaberintoInstancia->ClasificarBloquesPorSector();
+
+    for(int i = 0; i < 30; i++)
+    {
+        ABonus* BonusActual = ABonus::GetInstancia(GetWorld());
+        UE_LOG(LogTemp, Warning, TEXT("GameMode: Bloque %d en posicion (%f, %f, %f)"), i, BonusActual->GetActorLocation().X, BonusActual->GetActorLocation().Y, BonusActual->GetActorLocation().Z);
+	}
+
 }
 
 void ANavesUSFX2026GameMode::Tick(float DeltaTime)

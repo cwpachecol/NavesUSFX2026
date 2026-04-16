@@ -8,6 +8,7 @@
 /NODEFAULTLIB
 "D:\src_SIS457\NavesUSFX2026\Intermediate\Build\Win64\NavesUSFX2026Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
 "D:\src_SIS457\NavesUSFX2026\Intermediate\Build\Win64\UE4Editor\Development\NavesUSFX2026\Bloque.cpp.obj"
+"D:\src_SIS457\NavesUSFX2026\Intermediate\Build\Win64\UE4Editor\Development\NavesUSFX2026\Bonus.cpp.obj"
 "D:\src_SIS457\NavesUSFX2026\Intermediate\Build\Win64\UE4Editor\Development\NavesUSFX2026\Enemigo.cpp.obj"
 "D:\src_SIS457\NavesUSFX2026\Intermediate\Build\Win64\UE4Editor\Development\NavesUSFX2026\EnemigoAnimal.cpp.obj"
 "D:\src_SIS457\NavesUSFX2026\Intermediate\Build\Win64\UE4Editor\Development\NavesUSFX2026\GeneradorLaberinto.cpp.obj"
@@ -17,6 +18,7 @@
 "D:\src_SIS457\NavesUSFX2026\Intermediate\Build\Win64\UE4Editor\Development\NavesUSFX2026\NavesUSFX2026Projectile.cpp.obj"
 "D:\src_SIS457\NavesUSFX2026\Intermediate\Build\Win64\UE4Editor\Development\NavesUSFX2026\ObstaculoEnemigo.cpp.obj"
 "D:\src_SIS457\NavesUSFX2026\Intermediate\Build\Win64\UE4Editor\Development\NavesUSFX2026\Bloque.gen.cpp.obj"
+"D:\src_SIS457\NavesUSFX2026\Intermediate\Build\Win64\UE4Editor\Development\NavesUSFX2026\Bonus.gen.cpp.obj"
 "D:\src_SIS457\NavesUSFX2026\Intermediate\Build\Win64\UE4Editor\Development\NavesUSFX2026\Enemigo.gen.cpp.obj"
 "D:\src_SIS457\NavesUSFX2026\Intermediate\Build\Win64\UE4Editor\Development\NavesUSFX2026\EnemigoAnimal.gen.cpp.obj"
 "D:\src_SIS457\NavesUSFX2026\Intermediate\Build\Win64\UE4Editor\Development\NavesUSFX2026\GeneradorLaberinto.gen.cpp.obj"
